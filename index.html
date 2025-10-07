@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Undangan Pernikahan 135</title>
+  <meta name="description" content=
+  <link rel="icon" href="icon.png" type="image/png" />
+  <link rel="preload" href="assets/hero.jpg" as="image" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+
+  
+  <nav class="nav">
+    <div class="home">Undangan Pernikahan</div>
+    <button id="playMusic" class="btn outline music-float" aria-label="Putar musik">▶ Feel the rythm</button>
+    <button class="menu-btn" aria-label="Toggle menu">☰</button>
+    <ul class="menu">
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#detail"> Detail Acara</a></li>
+      <li><a href="#gallery">Galeri</a></li>
+      <li><a href="#kehadiran">Kehadiran</a></li>
+      <li><a href="#doa">Kirim Doa</a></li>
+      <li><a href="#harapan">Harapan Kami</a></li>
+    </ul>
+  </nav>
+  
+
+  <header id="homes" class="foto">
+    <img src="foto nikah.png" alt="Foto couple" class="foto-img" />
+    <div class="foto-overlay">
+      <h1 class="couple" >Izumi X Shikimori</h1>
+      <p class="date">Kamis 18 October 2125</p> 
+      <div id="countdown" class="countdown" aria-live="polite"></div>
+      
+      <audio id="bgMusic" loop>
+        <source src="One Direction - What Makes You Beautiful (Official Video).mp3" type="audio/mp3">
+      </audio>
+    </div>
+  </header>
+
+  <script>
+    
+    const music = document.getElementById("bgMusic");
+    const playBtn = document.getElementById("playMusic");
+    let isPlaying = false;
+
+    playBtn.addEventListener("click", () => {
+      if (isPlaying) {
+        music.pause();
+        playBtn.textContent = "▶ Feel the rythm";
+      } else {
+        music.play();
+        playBtn.textContent = "❚❚ Stop the rythm";
+      }
+      isPlaying = !isPlaying;
+    });
+
+    
+  </script>
+  
+  
+ 
+
+
+  <section id="detail" class="section">
+    <h2 class="section-title">Detail Acara</h2>
+    <div class="details-grid">
+      <div class="card">
+        <h3>Akad Nikah</h3>
+        <p><strong>Waktu:</strong> 11.00 WITAB </p>
+        <p><strong>Tanggal:</strong> kamis, 18 oktober 2125</p>
+        <p><strong>Tempat:</strong> Sanggar suci cinta</p>
+      </div>
+      <div class="card">
+        <h3>Resepsi</h3>
+        <p><strong>Waktu:</strong> 16.00-Selesai WITAB</p>
+        <p><strong>Tanggal:</strong> kamis, 18 oktober 2125</p>
+        <p><strong>Tempat:</strong> Istana kenangan malam bahagia</p>
+      </div>
+      <div class="card quote">
+        <blockquote>
+          “Wahai manusia! sungguh, kami telah menciptakan kamu dari seorang laki-laki dan seorang perempuan kemudian kami jadikan kamu berbangsa bangsa dan bersuku suku agar kamu saling <b>mengenal</b>.” — QS. Al-hujurat: 13
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  
+<section id="gallery" class="section">
+  <h2 class="section-title">Gallery Of Love</h2>
+  <div class="gallery">
+    <div class="gallery-track gallery-2">
+      <div class="love-photo">
+        <img src="love1.png" alt="Foto Love 1" class="glight" />
+      </div>
+      <div class="love-photo">
+        <img src="love2.png" alt="Foto Love 2" class="glight" />
+      </div>
+    </div>
+    <div class="gallery-controls">
+    </div>
+  </div>
+ 
+
+  
+  <section id="kehadiran" class="section">
+    <h2 class="section-title">Konfirmasi Kehadiran</h2>
+    <form class="form kehadiran-form">
+      <div class="form-group">
+        <label for="namaKehadiran"><span>👤</span> Nama Anda</label>
+        <input type="text" id="namaKehadiran" placeholder="Masukkan nama Anda" required aria-label="Nama" />
+      </div>
+      <div class="form-group">
+        <label for="statusKehadiran"><span>🎉</span> Status Kehadiran</label>
+        <select id="statusKehadiran" required aria-label="Status kehadiran">
+          <option value="">Pilih status kehadiran</option>
+          <option value="Hadir">Hadir</option>
+          <option value="Tidak Hadir">Tidak Hadir</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="jumlahTamu"><span>👥</span> Jumlah Tamu</label>
+        <input type="number" id="jumlahTamu" placeholder="Jumlah tamu (opsional)" min="1" aria-label="Jumlah tamu" />
+      </div>
+      <button type="submit" class="btn primary">Kirim Kehadiran</button>
+      <p class="form-hint">Isi semua form diatas.</p>
+    </form>
+    
+    
+  </section>
+
+  
+  <section id="doa" class="section">
+    <h2 class="section-title">Kirim Doa & Ucapan</h2>
+    <form id="doaForm" class="form">
+      <input type="text" id="namaDoa" placeholder="Nama Anda" required aria-label="Nama" />
+      <textarea id="pesanDoa" placeholder="Tulis doa atau ucapan..." required aria-label="Ucapan"></textarea>
+      <button type="submit" class="btn primary">Kirim</button>
+      <p class="form-hint">Terima kasih atas semua ucapan</p>
+    </form>
+    <div id="ucapanList" class="ucapan-list" aria-live="polite"></div>
+  </section>
+
+  
+  <section id="harapan" class="section">
+  <h2 class="section-title">Harapan Kami</h2>
+  <div class="harapan-container">
+    <p>
+      Dengan penuh rasa syukur dan cinta, kami melangkah ke kehidupan baru sebagai pasangan suami istri.  
+      Kami menyadari bahwa pernikahan bukanlah akhir dari kisah cinta, melainkan awal dari perjalanan panjang yang membutuhkan kesabaran, kepercayaan, dan kasih sayang.
+    </p>
+    <p>
+      Harapan kami adalah untuk tumbuh bersama dalam suka maupun duka, dalam tawa maupun air mata.  
+      Doakan agar rumah tangga kami selalu dipenuhi kebahagiaan, keberkahan, dan keharmonisan.
+    </p>
+    <blockquote>
+      “Semoga Allah menghimpun yang terserak dari keduanya, memberkahi mereka berdua, dan semoga Allah meningkatkan kualitas keturunan mereka, menjadikannya pembuka pintu rahmat, sumber ilmu, dan hikmah, serta pemberi rasa aman bagi umat.”
+    </blockquote>
+  </div>
+</section>
+
+
+  <section class="section">
+  <h2 class="section-title">Bagikan Undangan</h2>
+  <div style="text-align:center">
+    <button id="shareBtn" class="btn primary">🔗 Bagikan Undangan</button>
+    <p id="shareStatus" style="margin-top:10px;color:var(--navy);font-weight:600;"></p>
+  </div>
+</section>
+
+
+  
+  <footer class="footer">
+    <p style="color: purple;">With love everything will be okay</p>
+    <p class="tiny">Terima kasih atas doa dan kehadiran Anda.</p>
+  </footer>
+
+  <div id="falling-flowers"></div>
+
+  <script src="script.js"></script>
+  <script>
+    
+    const flowerColors = ["#e7a2b8", "#fff7f9", "#f3c1d6", "#800080", "#ffeef5"];
+    const flowerShapes = ["\u273F", "\u273E", "\u2740", "\u273C", "\u273D"];
+    function createFlower() {
+      const flower = document.createElement("div");
+      flower.className = "flower";
+      flower.style.left = Math.random() * 100 + "vw";
+      flower.style.fontSize = (24 + Math.random() * 18) + "px";
+      flower.style.color = flowerColors[Math.floor(Math.random()*flowerColors.length)];
+      flower.textContent = flowerShapes[Math.floor(Math.random()*flowerShapes.length)];
+      document.getElementById("falling-flowers").appendChild(flower);
+      setTimeout(() => flower.remove(), 9000);
+    }
+    setInterval(createFlower, 600);
+  </script>
+  <script>
+    
+    const kehadiran = document.querySelector('#kehadiran .form');
+    if (kehadiran) {
+      kehadiran.addEventListener('submit', function(e) {
+        e.preventDefault();
+        kehadiran.reset();
+        
+        const doaDanUcapan = document.getElementById('guestbook');
+        if (doaDanUcapan) {
+          doaDanUcapan.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    }
+    
+    const doa = document.getElementById('doaForm');
+    if (doa) {
+      doa.addEventListener('submit', function(e) {
+        e.preventDefault();
+        doa.reset();
+      });
+    }
+  </script>
+</body>
+</html>
